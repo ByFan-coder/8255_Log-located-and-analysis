@@ -1,0 +1,4 @@
+interface:
+  display_name: "T18D（8255）日志调试分析"
+  short_description: "先核对故障时间与日志覆盖缺失，再联查QNX日志并输出定位证据"
+  default_prompt: "使用 $t18d-8255-debug 分析当前目录日志，首先确认故障时间及日志是否缺失或未覆盖，再优先联查 qnxlog 的 slog2、systeminfo 和 QNXRunInfo.tar.gz 定位问题，给出编辑器行号；疑似屏端问题时先询问是否解析 display_log。"

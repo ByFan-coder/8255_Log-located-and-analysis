@@ -29,7 +29,7 @@ def validate():
     if not 25 <= len(values['short_description']) <= 64 or '$' + SKILL.name not in values['default_prompt']:
         raise ValueError('Invalid UI metadata values')
     files = sorted(path for path in SKILL.rglob('*') if path.is_file())
-    expected = {'SKILL.md', 'agents/openai.yaml', 'scripts/editor_line_locator.py', 'references/history.md', 'references/log-map.md', 'references/diagnosis.md', 'references/report-template.md', 'references/time-alignment.md'}
+    expected = {'SKILL.md', 'agents/openai.yaml', 'scripts/editor_line_locator.py', 'references/history.md', 'references/log-map.md', 'references/diagnosis.md', 'references/report-template.md', 'references/time-alignment.md', 'references/bug-form-dedup.md', 'assets/bug_table.md'}
     if {path.relative_to(SKILL).as_posix() for path in files} != expected:
         raise ValueError('Missing or unexpected skill files')
     for path in files:

@@ -8,3 +8,4 @@ dist/
 *.core
 *.dmp
 tests/.scratch-*/
+/bug_table.md
